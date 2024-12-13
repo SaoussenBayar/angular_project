@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-//import { environment } from '../environements/environement';
+import { environment } from '../../environements/environement';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:8000/login';  // Symfony login API endpoint
+  private apiUrl = 'http://localhost:8000/api/login';  // Symfony login API endpoint
   private tokenKey = 'auth_token';
 
   constructor(private http: HttpClient) {}
